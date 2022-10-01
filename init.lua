@@ -1,7 +1,7 @@
 
 local server_chat_name = 'SERVER'
 
-print("[MOD] yl_matterbridge_join_events loaded.")
+print("[MOD] yl_matterbridge_player_events loaded.")
 
 
 minetest.register_on_joinplayer(

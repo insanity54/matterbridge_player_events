@@ -1,4 +1,4 @@
-# yl_matterbridge_join_events Minetest mod
+# yl_matterbridge_player_events Minetest mod
 
 This mod adds the following features
 
