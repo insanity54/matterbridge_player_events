@@ -28,20 +28,7 @@ minetest.register_on_leaveplayer(
 
 minetest.register_on_cheat(
     function (player, cheat)
-        print(cheat.type)
-        if cheat.type == 'moved_too_fast' then
-            yl_matterbridge:send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (moved too fast)')
-        elseif cheat.type == 'interacted_too_far' then
-            yl_matterbridge:send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (interacted too far)')
-        elseif cheat.type == 'interacted_while_dead' then
-            yl_matterbridge:send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (interacted while dead)')
-        elseif cheat.type == 'finished_unknown_dig' then
-            yl_matterbridge:send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (finished unknown dig)')
-        elseif cheat.type == 'dug_unbreakable' then
-            yl_matterbridge:send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (dug unbreakable)')
-        elseif cheat.type == 'dug_too_fast' then
-            yl_matterbridge:send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (dug too fast)')
-        end
+        yl_matterbridge.send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (' .. cheat.type .. ')')
     end
 )
 
