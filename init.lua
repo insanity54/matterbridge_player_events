@@ -28,9 +28,6 @@ minetest.register_on_leaveplayer(
 
 minetest.register_on_cheat(
     function (player, cheat)
-        -- for key, val in pairs(cheat) do  -- Table iteration.
-        --   print(key, val)
-        -- end
         print(cheat.type)
         if cheat.type == 'moved_too_fast' then
             yl_matterbridge:send_to_bridge(server_chat_name, player:get_player_name() .. ' cheated. (moved too fast)')
